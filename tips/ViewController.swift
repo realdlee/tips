@@ -33,9 +33,13 @@ class ViewController: UIViewController {
         var billAmount = billField.text._bridgeToObjectiveC().doubleValue
         var tip = billAmount * tipPercentage
         var total = billAmount + tip
+        
+        
+        
         tipLabel.text = "$\(tip)"
         totalLabel.text = "$\(total)"
         
+//        tip = tip.StringByReplacingOccurrencesOfString
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format:"$%.2f", total)
         
